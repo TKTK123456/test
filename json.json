@@ -9,3 +9,14 @@
     "name": "test"
   }
 }
+{
+  "posts": [
+    {
+      "id": 2,
+      "title": "Hi as well"
+    }
+  ],
+  "profile": {
+    "name": "test as well"
+  }
+}
