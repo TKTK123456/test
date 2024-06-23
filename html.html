@@ -37,11 +37,12 @@ setInterval(update, 60000);
 function update() {
 $.get('https://raw.githubusercontent.com/TKTK123456/test/main/html.html', (data, status) => {
 console.log(data);
-    if (oldData == data) {
+if (oldData == data) {
 let oldData = data;
-    } else {
-reOpen()
-    }
+} else {
+alert("Reopening With this data:" + data);
+reOpen();
+}
 });
 }
 </script>
