@@ -1,9 +1,14 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <p id="hi">Hi</p>
-<button onclick="$.get('https://raw.githubusercontent.com/TKTK123456/test/main/html.html', (data, status) => {
+<script>
+function reOpen(){
+$.get('https://raw.githubusercontent.com/TKTK123456/test/main/html.html', (data, status) => {
 console.log(data);
 const newWinUrl = URL.createObjectURL(
     new Blob([data], { type: 'text/html' })
 );
 window.open(newWinUrl, _self);
-});">test</button>
+});
+}
+</script>
+<button onclick="reOpen()">test</button>
