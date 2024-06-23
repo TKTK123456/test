@@ -12,3 +12,21 @@ window.open(newWinUrl, "_self");
 }
 </script>
 <button onclick="reOpen()">test</button>
+<script>
+let oldData = "";
+$.get('https://raw.githubusercontent.com/TKTK123456/test/main/html.html', (data, status) => {
+console.log(data);
+let oldData = data;
+});
+setInterval(update, 60000);
+function update() {
+$.get('https://raw.githubusercontent.com/TKTK123456/test/main/html.html', (data, status) => {
+console.log(data);
+    if (oldData == data) {
+let oldData = data;
+    } else {
+reOpen()
+    }
+});
+}
+</script>
