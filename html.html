@@ -41,6 +41,7 @@ function update() {
 $.get('https://raw.githubusercontent.com/TKTK123456/test/main/html.html', (data, status) => {
 console.log(data);
 if (oldData == data) {
+alert('this works');
 let oldData = data;
 } else {
 $("#data").text(data);
