@@ -1,6 +1,7 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <p id="hi">Hi and also some <span style='color:#FF0000;'>R</span><span style='color:#FFBF00;'>a</span><span style='color:#7FFF00;'>i</span><span style='color:#00FF3F;'>n</span><span style='color:#00FEFF;'>b</span><span style='color:#003FFF;'>o</span><span style='color:#7F00FF;'>w</span><span style='color:#FF00BF;'>!</span>
 <p id="data"></p>
+<p id="oldData"></p>
 <script>
 	$(document).ready( function () {
 		$('form').submit( function () {
@@ -42,7 +43,9 @@ console.log(data);
 if (oldData == data) {
 let oldData = data;
 } else {
-alert("Reopening With this data:" + data + "and old data is:" + oldData);
+alert("Reopening");
+$("#data").text(data);
+$("#oldData").text(oldData);
 reOpen();
 }
 });
